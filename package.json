@@ -38,19 +38,19 @@
     "url": "https://github.com/bbeesley/p-timeout-compat/issues"
   },
   "homepage": "https://github.com/bbeesley/p-timeout-compat#readme",
-	"keywords": [
-		"promise",
-		"timeout",
-		"error",
-		"invalidate",
-		"async",
-		"await",
-		"promises",
-		"time",
-		"out",
-		"cancel",
-		"bluebird"
-	],
+  "keywords": [
+    "promise",
+    "timeout",
+    "error",
+    "invalidate",
+    "async",
+    "await",
+    "promises",
+    "time",
+    "out",
+    "cancel",
+    "bluebird"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.14.5",

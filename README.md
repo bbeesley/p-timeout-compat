@@ -9,13 +9,15 @@ Compatible version of p-timeout. Exports cjs and mjs versions of p-timeout and l
 ## use
 
 ```js
-import {setTimeout} from 'timers/promises';
-import pTimeout from 'p-timeout-compat';
+import PQueue from 'p-queue-compat';
+import got from 'got';
 
-const delayedPromise = setTimeout(200);
+const queue = new PQueue({concurrency: 1});
 
-await pTimeout(delayedPromise, 50);
-//=> [TimeoutError: Promise timed out after 50 milliseconds]
+(async () => {
+	await queue.add(() => got('https://sindresorhus.com'));
+	console.log('Done: sindresorhus.com');
+})();
 ```
 # p-timeout
 
