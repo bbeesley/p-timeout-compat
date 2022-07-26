@@ -68,7 +68,7 @@
     "conventional-changelog-angular": "^5.0.12",
     "cz-conventional-changelog": "^3.3.0",
     "npm-check-updates": "^11.8.3",
-    "p-timeout": "^5.0.0",
+    "p-timeout": "^6.0.0",
     "semantic-release": "^17.4.4"
   },
   "release": {
