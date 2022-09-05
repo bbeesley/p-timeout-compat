@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/bbeesley/p-timeout-compat/compare/v1.0.0...v1.0.1) (2022-09-05)
+
+
+### Bug Fixes
+
+* add support for ts esm modules ([8932a2b](https://github.com/bbeesley/p-timeout-compat/commit/8932a2b851d0afcc3ea24c07167b70bd90881e0b))
+
 # 1.0.0 (2021-07-19)
 
 
