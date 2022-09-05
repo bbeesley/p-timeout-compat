@@ -14,14 +14,7 @@ module.exports = function configureBabel(api) {
     ],
   ];
 
-  const plugins = isTest
-    ? []
-    : [
-        [
-          'babel-plugin-add-import-extension',
-          { extension: 'mjs', replace: true },
-        ],
-      ];
+  const plugins = [];
 
   return {
     presets,

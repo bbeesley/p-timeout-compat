@@ -13,9 +13,7 @@ module.exports = function configureBabel(api) {
     ],
   ];
 
-  const plugins = [
-    ['babel-plugin-add-import-extension', { extension: 'cjs', replace: true }],
-  ];
+  const plugins = [];
 
   return {
     presets,
