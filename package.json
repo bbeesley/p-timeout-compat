@@ -20,7 +20,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "test": "echo \"Warn: no tests\"",
+    "test": "npx ava",
     "dependabump": "ncu -u && rm -rf package-lock.json node_modules || true && npm i",
     "clean": "rm -rf dist || true && mkdir -p dist/types",
     "compile:readme": "cat HEADER.md node_modules/p-timeout/readme.md > README.md",
@@ -55,7 +55,6 @@
     "cancel",
     "bluebird"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.18.13",
@@ -68,12 +67,16 @@
     "@semantic-release/github": "^8.0.6",
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
+    "ava": "^5.2.0",
     "babel-plugin-add-import-extension": "^1.6.0",
     "conventional-changelog-angular": "^5.0.13",
     "cz-conventional-changelog": "^3.3.0",
+    "delay": "^5.0.0",
+    "in-range": "^3.0.0",
     "npm-check-updates": "^16.1.0",
-    "p-timeout": "^6.0.0",
-    "semantic-release": "^19.0.5"
+    "p-timeout": "^6.1.1",
+    "semantic-release": "^19.0.5",
+    "time-span": "^5.1.0"
   },
   "release": {
     "branches": [
@@ -95,7 +98,8 @@
             {
               "type": "chore",
               "scope": "deps*",
-              "release": "patch"
+              "release": "patch",
+              "subject": "bump p-timeout *"
             }
           ]
         }
@@ -120,5 +124,14 @@
         }
       ]
     ]
+  },
+  "ava": {
+    "files": [
+      "test/*.test.cjs"
+    ],
+    "failFast": false,
+    "failWithoutAssertions": false,
+    "verbose": true,
+    "timeout": "1m"
   }
 }

@@ -24,7 +24,6 @@
       "ghcr.io/devcontainers-contrib/features/npm-package:1" : {
          "package" : "commitizen"
       },
-      "ghcr.io/devcontainers/features/aws-cli:1" : {},
       "ghcr.io/devcontainers/features/common-utils:2" : {
          "configureZshAsDefaultShell" : true,
          "installOhMyZsh" : true,
@@ -34,9 +33,6 @@
       },
       "ghcr.io/devcontainers/features/github-cli:1" : {},
       "ghcr.io/devcontainers/features/sshd:1" : {},
-      "ghcr.io/dhoeric/features/google-cloud-cli:1" : {
-         "version" : "latest"
-      },
       "ghcr.io/rocker-org/devcontainer-features/apt-packages:1" : {
          "packages" : "gnupg2,vim"
       }
