@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/bbeesley/p-timeout-compat/compare/v1.0.2...v1.0.3) (2023-04-05)
+
+
+### Bug Fixes
+
+* fix an issue with incorrectly resolved modules ([cb4a906](https://github.com/bbeesley/p-timeout-compat/commit/cb4a90672b275efd9af9e6f3e55d0eabb75dac43))
+
 ## [1.0.2](https://github.com/bbeesley/p-timeout-compat/compare/v1.0.1...v1.0.2) (2022-09-05)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "p-timeout-compat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Compatible version of p-timeout",
   "type": "module",
   "exports": {
