@@ -133,5 +133,10 @@
     "failWithoutAssertions": false,
     "verbose": true,
     "timeout": "1m"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
