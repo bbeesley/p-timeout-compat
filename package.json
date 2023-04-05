@@ -20,6 +20,7 @@
     "node": ">=12"
   },
   "scripts": {
+    "pretest": "npm run compile",
     "test": "npx ava",
     "dependabump": "ncu -u && rm -rf package-lock.json node_modules || true && npm i",
     "clean": "rm -rf dist || true && mkdir -p dist/types",
