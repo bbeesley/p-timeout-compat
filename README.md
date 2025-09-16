@@ -75,7 +75,7 @@ Passing `Infinity` will cause it to never time out.
 ##### message
 
 Type: `string | Error | false`\
-Default: `'Promise timed out after 50 milliseconds'`
+Default: `'Promise timed out after {milliseconds} milliseconds'`
 
 Specify a custom error message or error to throw when it times out:
 
@@ -99,6 +99,8 @@ Type: `Function`
 
 Do something other than rejecting with an error on timeout.
 
+The function can return a value or a promise.
+
 You could for example retry:
 
 ```js
@@ -110,8 +112,10 @@ const delayedPromise = () => setTimeout(200);
 await pTimeout(delayedPromise(), {
 	milliseconds: 50,
 	fallback: () => {
-		return pTimeout(delayedPromise(), {milliseconds: 300});
-	},
+		return pTimeout(delayedPromise(), {
+			milliseconds: 300
+		});
+	}
 });
 ```
 
@@ -126,8 +130,8 @@ Useful for testing purposes, in particular to work around [`sinon.useFakeTimers(
 Example:
 
 ```js
-import {setTimeout} from 'node:timers/promises';
 import pTimeout from 'p-timeout';
+import sinon from 'sinon';
 
 const originalSetTimeout = setTimeout;
 const originalClearTimeout = clearTimeout;
@@ -144,13 +148,11 @@ await pTimeout(doSomething(), {
 });
 ```
 
-#### signal
+##### signal
 
 Type: [`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal)
 
-You can abort the promise using [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
-
-*Requires Node.js 16 or later.*
+Abort the promise.
 
 ```js
 import pTimeout from 'p-timeout';
@@ -185,7 +187,7 @@ Exposed for instance checking and sub-classing.
 
 > Modern alternative to `p-timeout`
 
-Asynchronous functions like `fetch` can accept an [`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal), which can be conveniently created with [`AbortSignal.timeout()`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout_static).
+Async functions like `fetch` can accept an [`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal), which can be conveniently created with [`AbortSignal.timeout()`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout_static).
 
 The advantage over `p-timeout` is that the promise-generating function (like `fetch`) is actually notified that the user is no longer expecting an answer, so it can interrupt its work and free resources.
 

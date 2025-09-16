@@ -1,3 +1,5 @@
+## [1.0.7](https://github.com/bbeesley/p-timeout-compat/compare/v1.0.6...v1.0.7) (2025-09-16)
+
 ## [1.0.6](https://github.com/bbeesley/p-timeout-compat/compare/v1.0.5...v1.0.6) (2025-01-02)
 
 ## [1.0.5](https://github.com/bbeesley/p-timeout-compat/compare/v1.0.4...v1.0.5) (2024-10-18)
