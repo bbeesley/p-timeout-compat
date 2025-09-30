@@ -74,7 +74,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "delay": "^5.0.0",
     "in-range": "^3.0.0",
-    "npm-check-updates": "^18.0.0",
+    "npm-check-updates": "^19.0.0",
     "p-timeout": "^7.0.0",
     "semantic-release": "^22.0.0",
     "time-span": "^5.1.0"
