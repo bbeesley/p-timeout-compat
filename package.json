@@ -75,7 +75,7 @@
     "delay": "^5.0.0",
     "in-range": "^3.0.0",
     "npm-check-updates": "^23.0.0",
-    "p-timeout": "^7.0.0",
+    "p-timeout": "^8.0.0",
     "semantic-release": "^22.0.0",
     "time-span": "^5.1.0"
   },
